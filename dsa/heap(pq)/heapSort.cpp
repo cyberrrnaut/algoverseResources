@@ -1,7 +1,7 @@
-#include <bits/stc++.h>
+#include <bits/stdc++.h>
 
 // Function to heapify a subtree rooted with node i which is an index in arr[].
-void heapify(vector<int> &arr, int n, int i)
+void heapify(std::vector<int> &arr, int n, int i)
 {
     int largest = i;       // Initialize largest as root
     int left = 2 * i + 1;  // left child
@@ -18,7 +18,7 @@ void heapify(vector<int> &arr, int n, int i)
     // If largest is not root
     if (largest != i)
     {
-        swap(arr[i], arr[largest]);
+        std::swap(arr[i], arr[largest]);
 
         // Recursively heapify the affected sub-tree
         heapify(arr, n, largest);
@@ -26,7 +26,7 @@ void heapify(vector<int> &arr, int n, int i)
 }
 
 // Main function to do heapsort
-void heapSort(vector<int> &arr)
+void heapSort(std::vector<int> &arr)
 {
     int n = arr.size();
 
@@ -38,7 +38,7 @@ void heapSort(vector<int> &arr)
     for (int i = n - 1; i >= 0; i--)
     {
         // Move current root to end
-        swap(arr[0], arr[i]);
+        std::swap(arr[0], arr[i]);
 
         // call max heapify on the reduced heap
         heapify(arr, i, 0);
@@ -46,25 +46,25 @@ void heapSort(vector<int> &arr)
 }
 
 // A utility function to print array of size n
-void printArray(vector<int> &arr)
+void printArray(std::vector<int> &arr)
 {
     int n = arr.size();
     for (int i = 0; i < n; ++i)
-        cout << arr[i] << " ";
-    cout << "\n";
+    std::cout << arr[i] << " ";
+    std::cout << "\n";
 }
 
 // Driver program
 int main()
 {
-    vector<int> arr = {12, 11, 13, 5, 6, 7};
+    std::vector<int> arr = {12, 11, 13, 5, 6, 7};
 
-    cout << "Original array is \n";
+    std::cout << "Original array is \n";
     printArray(arr);
 
     heapSort(arr);
 
-    cout << "Sorted array is \n";
+    std::cout << "Sorted array is \n";
     printArray(arr);
     return 0;
 }

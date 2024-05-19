@@ -1,6 +1,5 @@
- #include<bits/stdc++.h>
+#include <bits/stdc++.h>
 // #include<iostream>
-
 
 class MaxHeap
 {
@@ -76,7 +75,7 @@ public:
 };
 
 int main()
-{ 
+{
     MaxHeap maxHeap;
     maxHeap.insert(10);
     maxHeap.insert(20);
@@ -84,9 +83,9 @@ int main()
     maxHeap.insert(30);
     maxHeap.insert(40);
 
-int n;
-std::cin>>n;
-std::cout <<"HI"<<n<<'\n';
+    int n;
+    std::cin >> n;
+    std::cout << "HI" << n << '\n';
     std::cout << "Max-Heap: ";
     maxHeap.printHeap();
 

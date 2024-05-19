@@ -1,4 +1,4 @@
-#include <bits/stc++.h>
+#include <bits/stdc++.h>
 
 void maxHeapify(std::vector<int> &heap, int n, int i)
 {
@@ -34,9 +34,9 @@ int main()
     buildMaxHeap(heap);
 
     std::cout << "Max Heap: ";
-    for (int i : heap)
+    for (auto it : heap)
     {
-        std::cout << i << " ";
+        std::cout << it << " ";
     }
     std::cout << std::endl;
 

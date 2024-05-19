@@ -1,4 +1,4 @@
-#include <bits/stc++.h>
+#include <bits/stdc++.h>
 
 void minHeapify(std::vector<int> &heap, int n, int i)
 {
