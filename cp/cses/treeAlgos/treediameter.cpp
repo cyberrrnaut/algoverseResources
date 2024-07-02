@@ -10,7 +10,7 @@ private:
 
         for (int neighbor : adj[node]) {
             if (neighbor != parent) {
-                pair<int, int> sub_result = dfs(neighbor, node, adj);
+                pair<int, int> sub_result = dfs(neighbor, node, adj); // this will return at base case
                 sub_result.first++; // increase distance
 
                 if (sub_result.first > result.first) {
