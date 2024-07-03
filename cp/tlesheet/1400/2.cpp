@@ -6,40 +6,30 @@ typedef long long ll;
 class Solution {
 public:
     void cyb3rnaut() {
-     ll n;
-     cin>>n;
+    ll n;
+    cin>>n;
 
-     vector<ll> arr(n),temp(n);
+    ll ans =0;
+    ll sl=1e9,tl=1e9;
 
+    for(ll i=0;i<n;i++){
+        ll inp;
+        cin>>inp;
+      if(sl>tl) swap(sl,tl);
 
-     for(ll i=0;i<n;i++){
-      cin>>arr[i];
+      if(inp<=sl){  //below sl
+        sl=inp;
+      }else if(inp<=tl){ //between
+        tl=inp;
+      }else{  //greater than tl
+        sl=inp;
+        ans++; // penalty will increase anyways
+      } 
+
      }
+  
 
-     temp = arr;
-     
-     sort(temp.begin(),temp.end(),greater<ll>());
-      
-      vector<ll>extra;
-      ll i=0,j=0;
-      while(i<n && j<n){
-      if(arr[i]==temp[j]){
-        j++;
-      }else{
-        extra.push_back(arr[i]);
-      }
-        i++;
-      }
-       
-
-       ll ans =0;
-
-       for(ll i=0;i<(ll)(extra.size())-1;i++){
-        if(extra[i]<extra[i+1]) ans++;
-       }
-      
-      cout<<ans<<endl;
-
+     cout<<ans<<endl;
     } 
 };
 
