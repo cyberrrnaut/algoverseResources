@@ -25,3 +25,10 @@ JAVA CONFIG BUILD
     "shell": true,
     "working_dir": "${file_path}"
 }
+
+
+
+RUST NOTES
+
+https://www.notion.so/cyb3rnaut/RUST-bd4ec18cef064349a885391b2a7bab15
+
